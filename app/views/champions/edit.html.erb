@@ -1,0 +1,9 @@
+<h1>Edit Champion</h1>
+
+<%= simple_form_for @champion, :html => { :multipart => true } do |f| %>
+    <%= f.select :category_id, @categories %>
+    <%= f.file_field :champion_img %>
+    <%= f.input :name, label: "Champion Name" %>
+    <%= f.input :alias %>
+    <%= f.button :submit %>
+<% end %>

@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.champion {
+    height: 224px;
+    width: 400px;
+}
+
+.champion_show {
+    height: 350px;
+    width: 525px;
+}

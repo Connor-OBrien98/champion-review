@@ -1,0 +1,21 @@
+<h1 class="current-category"><%= params[:category] %></h1>
+
+<% if @champions.count == 0 %>
+
+    <h1>There are no champions currently in this category</h1>
+
+<% else %>
+
+    <div class="row">
+
+    <% @champions.each do |champion| %>
+        <div class="col-md-4">
+            <a href="/champions/<%= champion.id %>">
+                <%= image_tag champion.champion_img.url(:champion_index), class: "champion" %>
+            </a>
+        </div>
+    <% end %>
+
+    </div>
+
+<% end %>
