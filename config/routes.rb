@@ -4,4 +4,5 @@ Rails.application.routes.draw do
     resources :reviews
   end
   root 'champions#index'
+  get '/search' => 'champions#search', :as => 'search_page'
 end

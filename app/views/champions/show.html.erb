@@ -4,7 +4,7 @@
         <%= image_tag @champion.champion_img.url(:champion_show), class:"champion-show" %>
     </div>
     <div class="col-md-4">
-        <h1><%= NoProfanity.check(@champion.name) %></h1>
+        <h1 class="title"><%= NoProfanity.check(@champion.name) %></h1>
         <h4><%= @champion.alias %></h4>
         <h5>Category: <%= @champion.category.name %></h5>
     </div>

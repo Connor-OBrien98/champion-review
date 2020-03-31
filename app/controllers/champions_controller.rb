@@ -29,6 +29,17 @@ class ChampionsController < ApplicationController
         end
     end
 
+    def search
+        if params[:search].blank?
+          redirect_to champions_path
+        elsif params[:search]
+          @parameter = params[:search].downcase
+          @search_results = Champion.all.where("lower(name) like ?", "#{@parameter}%")
+        else
+          flash.alert = "Could not find a champion with that query"
+        end
+    end
+    
     def edit
         @categories = Category.all.map{ |c| [c.name, c.id] }
     end

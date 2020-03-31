@@ -1,0 +1,10 @@
+<div class="row">
+    <% @search_results.each do |champion| %>
+        <div class="col-md-4">
+            <a href="/champions/<%= champion.id %>">
+                <%= image_tag champion.champion_img.url(:champion_index), class:"champion" %>
+            </a>
+            <h3 style="text-transform: capitalize;"><%= NoProfanity.check(champion.name) %></h3>
+        </div>
+    <% end %>
+</div>
