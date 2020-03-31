@@ -1,5 +1,10 @@
 <h1>Edit Champion</h1>
 
+<%
+=begin%>
+  Edit fields, same as the form
+<%
+=end%>
 <%= simple_form_for @champion, :html => { :multipart => true } do |f| %>
     <%= f.select :category_id, @categories %>
     <%= f.file_field :champion_img %>

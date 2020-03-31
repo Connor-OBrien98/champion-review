@@ -1,3 +1,5 @@
+# each user can make multiple reviews and create multiple champions
+
 class User < ApplicationRecord
   has_many :champions
   has_many :reviews
